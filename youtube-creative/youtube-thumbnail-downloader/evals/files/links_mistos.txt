@@ -1,0 +1,6 @@
+# Links em formatos variados + um inválido
+https://www.youtube.com/watch?v=dQw4w9WgXcQ
+https://youtu.be/jNQXAC9IVRw
+https://www.youtube.com/embed/9bZkp7q19f0
+isso-nao-e-um-link-valido
+https://www.youtube.com/watch?v=kJQP7kiw5Fk

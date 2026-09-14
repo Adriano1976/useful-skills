@@ -1,0 +1,100 @@
+1
+00:00:00,000 --> 00:00:03,520
+Olá pessoal, tudo bem? Sejam bem vindos a mais um vídeo.
+
+2
+00:00:03,800 --> 00:00:07,200
+Hoje a gente vai falar sobre redes neurais convolucionais.
+
+3
+00:00:07,500 --> 00:00:10,800
+Esse é um tema muito importante na área de visão computacional.
+
+4
+00:00:13,520 --> 00:00:17,260
+Primeiro, vamos entender o que é uma convolução...
+
+5
+00:00:17,500 --> 00:00:21,260
+Primeiro, vamos entender o que é uma convolução e como ela funciona.
+
+6
+00:00:22,740 --> 00:00:26,660
+Uma convolução é basicamente uma operação matemática que
+
+7
+00:00:27,000 --> 00:00:30,660
+Uma convolução é basicamente uma operação matemática que combina duas funções.
+
+8
+00:00:37,480 --> 00:00:39,300
+Éh... tipo assim...
+
+9
+00:00:39,500 --> 00:00:43,300
+Na prática, o que a rede neural faz é aplicar filtros na imagem.
+
+10
+00:00:47,780 --> 00:00:50,240
+Esses filtros são chamados de...
+
+11
+00:00:50,500 --> 00:00:54,240
+Esses filtros são chamados de kernels e eles detectam padrões na imagem.
+
+12
+00:00:58,000 --> 00:00:61,960
+E aí a cada camada da rede, os padrões ficam mais complexos.
+
+13
+00:01:05,000 --> 00:01:08,500
+Na primeira camada a gente detecta bordas e cantos.
+
+14
+00:01:09,000 --> 00:01:12,500
+Na segunda camada, a gente começa a ver formas mais complexas.
+
+15
+00:01:13,000 --> 00:01:16,200
+E na terceira camada já temos reconhecimento de objetos.
+
+16
+00:01:20,000 --> 00:01:23,500
+Agora vamos ver o código... 
+
+17
+00:01:23,800 --> 00:01:27,500
+Agora vamos ver o código em Python pra implementar isso.
+
+18
+00:01:28,000 --> 00:01:31,500
+A gente vai usar o PyTorch que é o framework que...
+
+19
+00:01:31,800 --> 00:01:35,500
+A gente vai usar o PyTorch que é o framework que eu mais gosto de usar.
+
+20
+00:01:36,000 --> 00:01:39,500
+Éh... hm...
+
+21
+00:01:40,000 --> 00:01:44,000
+Vou importar o torch e o torchvision pra gente começar.
+
+22
+00:01:44,500 --> 00:01:48,000
+Primeiro a gente define a arquitetura da rede.
+
+23
+00:01:48,300 --> 00:01:52,000
+Vamos criar uma classe que herda de nn.Module.
+
+24
+00:01:55,000 --> 00:01:58,500
+Dentro do construtor, a gente define as camadas.
+
+25
+00:01:59,000 --> 00:02:03,000
+A primeira camada convolucional vai ter 3 canais de entrada e 16 de saída.
+

@@ -1,0 +1,45 @@
+{
+  "skill_name": "youtube-thumbnail-downloader",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tenho um arquivo com links do YouTube em /sessions/cool-lucid-cerf/youtube-thumbnail-downloader/evals/files/links_validos.txt — baixa as thumbnails de todos esses vídeos e salva numa pasta chamada 'thumbnails' no mesmo diretório.",
+      "expected_output": "3 thumbnails baixadas com sucesso (dQw4w9WgXcQ.jpg, jNQXAC9IVRw.jpg, 9bZkp7q19f0.jpg) na pasta evals/files/thumbnails/",
+      "files": ["evals/files/links_validos.txt"],
+      "assertions": [
+        "O script download_thumbnails.py foi executado via bash",
+        "Foram baixados 3 arquivos .jpg na pasta thumbnails",
+        "O arquivo dQw4w9WgXcQ.jpg existe e tem mais de 1KB",
+        "O arquivo jNQXAC9IVRw.jpg existe e tem mais de 1KB",
+        "O arquivo 9bZkp7q19f0.jpg existe e tem mais de 1KB",
+        "O resumo final informa o número de thumbnails baixadas com sucesso",
+        "O caminho da pasta de saída é informado ao usuário"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Aqui está minha lista de links do YouTube: /sessions/cool-lucid-cerf/youtube-thumbnail-downloader/evals/files/links_mistos.txt — tem alguns links válidos e um que não é do YouTube. Faz o download das thumbnails que der e me diz quais falharam.",
+      "expected_output": "4 thumbnails baixadas com sucesso, 1 falha reportada para 'isso-nao-e-um-link-valido', com mensagem de erro clara",
+      "files": ["evals/files/links_mistos.txt"],
+      "assertions": [
+        "O script download_thumbnails.py foi executado",
+        "4 thumbnails válidas foram baixadas com sucesso",
+        "A linha 'isso-nao-e-um-link-valido' foi identificada como inválida",
+        "O usuário é informado sobre qual link falhou e o motivo",
+        "O resumo mostra separadamente quantos tiveram sucesso e quantos falharam"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Preciso das thumbnails dos vídeos nessa lista: /sessions/cool-lucid-cerf/youtube-thumbnail-downloader/evals/files/links_validos.txt. Salva as imagens em /sessions/cool-lucid-cerf/mnt/outputs/minhas_thumbnails/",
+      "expected_output": "Thumbnails baixadas e salvas em /sessions/cool-lucid-cerf/mnt/outputs/minhas_thumbnails/ (pasta customizada especificada pelo usuário)",
+      "files": ["evals/files/links_validos.txt"],
+      "assertions": [
+        "O script download_thumbnails.py foi executado com a pasta de saída customizada",
+        "As thumbnails foram salvas em /sessions/cool-lucid-cerf/mnt/outputs/minhas_thumbnails/",
+        "Pelo menos 3 arquivos .jpg foram criados na pasta correta",
+        "O usuário é informado sobre o local onde os arquivos foram salvos"
+      ]
+    }
+  ]
+}
